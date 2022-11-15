@@ -15,12 +15,13 @@ window.addEventListener('load', () => {
 
 		const todo = {
 			content: event.target.elements.content.value,
-			category: event.target.elements.category.value,
+			priority: event.target.elements.priority.value,
 			done: false,
 			createdAt: new Date().getTime()
 		}
 
 		todos.push(todo);
+		sortArray();
 
 		localStorage.setItem('todos', JSON.stringify(todos));
 
@@ -120,4 +121,11 @@ function displayTodos () {
 	} else {
 		document.getElementById('finished').style.display = 'none';
 	};
+
 }
+
+function sortArray () {
+	todos.sort((a, b) => a.priority - b.priority)
+}
+
+
