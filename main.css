@@ -216,13 +216,30 @@ input:checked ~ .bubble::after {
 	display: flex;
 	width: 800px;
 	align-items: center;
-	background-color: #FFF;
-	padding: 1rem;
+	/* background-color: #FFF; */
+	padding: 0.5rem;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
+	border: 1px solid var(--light);
+	/* box-shadow: var(--shadow); */
 	margin-bottom: 1rem;
-
 }
+
+.level1 {
+	background-color: #FFBFBE;
+}
+.level2 {
+	background-color: #FF999A;
+}
+.level3 {
+	background-color: #FE4D4E;
+}
+.level4 {
+	background-color: #FE0101;
+}
+.level5 {
+	background-color: #CD0023;
+}
+
 
 .todo-item label {
 	display: block;

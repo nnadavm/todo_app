@@ -41,6 +41,7 @@ function displayTodos () {
 	todos.forEach(element => {
 		const todoItem = document.createElement('div');
 		todoItem.classList.add('todo-item');
+		todoItem.classList.add(`level${element.priority}`);
 
 		const label = document.createElement('label');
 		const input = document.createElement('input');
