@@ -114,4 +114,10 @@ function displayTodos () {
 
 		})
 	})
+
+	if (todos.length == 0) {
+		document.getElementById('finished').style.display = 'block';
+	} else {
+		document.getElementById('finished').style.display = 'none';
+	};
 }
