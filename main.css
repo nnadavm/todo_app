@@ -5,7 +5,7 @@
 	--personal: var(--primary);
 	--light: #EEE;
 	--grey: #888;
-	--dark: #313154;
+	--dark: #202020;
 	--danger: #ff5b57;
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	max-width: 800px;
+	max-width: 600px;
 
 	margin: auto;
 	margin-top: 2rem;
@@ -97,13 +97,13 @@ h4 {
 
 .create-todo input[type="text"] {
 	display: block;
-	width: 800px;
+	width: 600px;
 	font-size: 1rem;
 	padding: 0.5rem 1.5rem;
 	color: var(--dark);
 	background-color: #FFF;
 	border-radius: 0.5rem;
-	border: 1px solid var(--light);
+	border: 1px solid lightgray;
 	/* box-shadow: var(--shadow); */
 	margin-bottom: 1.5rem;
 	text-align: center;
@@ -126,7 +126,7 @@ h4 {
 	justify-content: center;
 	background-color: #FFF;
 	padding: 1.5rem;
-	box-shadow: var(--shadow);
+	/* box-shadow: var(--shadow); */
 	border-radius: 0.5rem;
 	cursor: pointer;
 }
@@ -183,10 +183,11 @@ input:checked ~ .bubble::after {
 
 .create-todo input[type="submit"] {
 	display: block;
-	width: 100%;
+	width: 160px;
+	margin: 0 auto;
 	font-size: 1rem;
 	padding: 0.5rem 1.5rem;
-	color: #black;
+	color: black;
 	font-weight: 700;
 	text-transform: uppercase;
 	background-color: var(--light);
@@ -213,12 +214,14 @@ input:checked ~ .bubble::after {
 
 .todo-list .todo-item {
 	display: flex;
-	width: 800px;
+	font-size: 1rem;
+	width: 600px;
 	align-items: center;
 	background-color: #FFF;
-	padding: 1rem;
+	padding: 0.5rem 1.5rem;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
+	/* box-shadow: var(--shadow); */
+	border: 1px solid lightgray;
 	margin-bottom: 1rem;
 
 }
@@ -245,7 +248,7 @@ input:checked ~ .bubble::after {
 
 .todo-item .actions button {
 	display: block;
-	padding: 0.5rem;
+	padding: 0.3rem;
 	border-radius: 0.25rem;
 	color: #FFF;
 	cursor: pointer;

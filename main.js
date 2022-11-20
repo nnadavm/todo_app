@@ -13,20 +13,26 @@ window.addEventListener('load', () => {
 	newTodoForm.addEventListener('submit', (event) => {
 		event.preventDefault();
 
-		const todo = {
-			content: event.target.elements.content.value,
-			category: event.target.elements.category.value,
-			done: false,
-			createdAt: new Date().getTime()
-		}
+		if (document.querySelector('#new-todo-form input').value === "") {
+			alert("please add your to-do");
+		} else {
 
-		todos.push(todo);
+			const todo = {
+				content: event.target.elements.content.value,
+				category: event.target.elements.category.value,
+				done: false,
+				createdAt: new Date().getTime()
+			}
+	
+			todos.push(todo);
+	
+			localStorage.setItem('todos', JSON.stringify(todos));
+	
+			event.target.reset();
+	
+			displayTodos();
+		};
 
-		localStorage.setItem('todos', JSON.stringify(todos));
-
-		event.target.reset();
-
-		displayTodos();
 	})
 
 	displayTodos();
